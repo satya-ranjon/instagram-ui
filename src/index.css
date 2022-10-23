@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .grid___three {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 lg:gap-4 transition-all duration-300 my-10 font-semibold mx-10  sm:mx-20 lg:mx-32 xl:mx-40;
+  }
+  .grid___two {
+    @apply grid grid-cols-1 sm:grid-cols-2 gap-2 lg:gap-4  my-10 font-semibold mx-10 transition-all duration-300 sm:mx-20 lg:mx-32 xl:mx-40;
+  }
+  .grid___one {
+    @apply grid grid-cols-1  gap-2 lg:gap-4  my-10 font-semibold mx-10 sm:mx-32 md:mx-44 transition-all duration-300 lg:mx-60 xl:mx-60;
+  }
+  .img__three {
+    @apply bg-red-300 w-full h-[18rem] transition-all duration-300 sm:h-[14rem] xl:h-[18rem] 2xl:h-[28rem];
+  }
+  .img__two {
+    @apply bg-red-300 w-full h-[18rem] transition-all duration-300 sm:h-[20rem] lg:h-[24rem] xl:h-[28rem] 2xl:h-[40rem];
+  }
+  .img__one {
+    @apply bg-red-300 w-full h-[18rem] transition-all duration-300 sm:h-[20rem] lg:h-[32rem] xl:h-[40rem] 2xl:h-[52rem];
+  }
+  .button__btn {
+    @apply text-sm bg-neutral-200 transition-all duration-300 hover:bg-neutral-300 my-auto p-1 px-3 rounded-sm font-semibold cursor-pointer;
+  }
+  .photo__feed {
+    @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:max-h-[26rem] h-fit sm:overflow-y-scroll;
+  }
+  .profile_section {
+    @apply w-full px-10 sm:px-0 sm:w-[18rem] md:w-[25rem] lg:w-[38rem] xl:w-[50rem] 2xl:w-[60rem];
+  }
+  .image__i {
+    @apply h-[12rem] sm:h-[10rem] lg:h-[12rem] w-full bg-red-200;
+  }
+  .video__v {
+    @apply h-[20rem] md:h-full w-full bg-red-200 sm:col-span-2 row-span-2;
+  }
+  .post__detiels_model {
+    @apply transition-all duration-300 sm:w-[36rem] lg:w-[60rem] xl:w-[75rem] h-[70rem]  lg:h-[50rem] flex lg:flex-row flex-col justify-between;
+  }
+}
+
+@layer utilities {
+  .text__2xl {
+    font-size: 3rem;
+  }
+}
+
+/* body::-webkit-scrollbar {
+  display: none;
+} */
+.hide_scrollbar::-webkit-scrollbar {
+  display: none;
+  overflow: hidden;
+}
+
+#category {
+  overflow: hidden;
+}
+
+.hover_show {
+  top: -1000%;
+  left: 0%;
+  transition: all 0.3s;
+}
+.expolor:hover .hover_show {
+  display: block;
+  top: 0%;
+}
+
+.login__box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hover__profile {
+  top: -999%;
+}
+
+.profile_img:hover .hover__profile {
+  top: 0%;
+}
+
+.bg__img {
+  background: url(./Assets/image/upprofile.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
