@@ -81,6 +81,7 @@ export default function LoginSign() {
                 onChange={(e) => setUsername(e.target.value)}
                 label="Username *"
                 variant="filled"
+                value={username}
               />
             )}
             <br />
@@ -90,6 +91,7 @@ export default function LoginSign() {
               label="Email *"
               onChange={(e) => setEmail(e.target.value)}
               variant="filled"
+              value={email}
             />
             <br />
 
@@ -101,14 +103,14 @@ export default function LoginSign() {
                 className="w-full"
                 id="filled-adornment-password"
                 onChange={(e) => setPassword(e.target.value)}
+                value={password}
                 type={passwordShow ? "text" : "password"}
                 endAdornment={
                   <InputAdornment position="end">
                     <IconButton
                       aria-label="toggle password visibility"
                       edge="end"
-                      onClick={() => setPassowrdShow((prv) => !prv)}
-                    >
+                      onClick={() => setPassowrdShow((prv) => !prv)}>
                       {passwordShow ? <VisibilityOff /> : <Visibility />}
                     </IconButton>
                   </InputAdornment>
@@ -121,8 +123,7 @@ export default function LoginSign() {
               disabled={loading}
               type="submit"
               className="w-full"
-              variant="outlined"
-            >
+              variant="outlined">
               {pathname === "/login" ? "Login" : " Sign Up"}
             </Button>
           </form>
@@ -134,16 +135,14 @@ export default function LoginSign() {
           <Button
             variant="text"
             className=" w-full flex space-x-2"
-            onClick={() => googleAuth()}
-          >
+            onClick={() => googleAuth()}>
             <FcGoogle className=" text-2xl" />
             <p className="">Google</p>
           </Button>
           <Button
             variant="text"
             className=" w-full flex space-x-2"
-            onClick={() => facebookAuth()}
-          >
+            onClick={() => facebookAuth()}>
             <img src={facebook} alt="" />
             <p className=" ">Facebook</p>
           </Button>
@@ -153,8 +152,7 @@ export default function LoginSign() {
             {pathname === "/login" ? " Don't " : " Already"} have an account?
             <Link
               to={`${pathname === "/login" ? "/signup" : "/login"}`}
-              className=" text-blue-500 font-semibold cursor-pointer"
-            >
+              className=" text-blue-500 font-semibold cursor-pointer">
               {pathname === "/login" ? " Sign Up" : " Login"}
             </Link>
           </p>
