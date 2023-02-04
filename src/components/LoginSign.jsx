@@ -15,9 +15,9 @@ import { useAuth } from "../Context/AuthContext";
 export default function LoginSign() {
   const { pathname } = useLocation();
   const [passwordShow, setPassowrdShow] = useState(false);
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("demo");
+  const [password, setPassword] = useState("demo");
+  const [email, setEmail] = useState("demo@gmail.com");
   const { signup, login, currentUser, googleAuth, facebookAuth } = useAuth();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState();
@@ -27,7 +27,7 @@ export default function LoginSign() {
     e.preventDefault();
     if (pathname === "/signup") {
       if (
-        password.length > 7 &&
+        password.length > 4 &&
         username.length > 0 &&
         email.match(
           /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -50,7 +50,7 @@ export default function LoginSign() {
         email.match(
           /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         ) &&
-        password > 7
+        password > 4
       )
         try {
           setError("");
