@@ -1,13 +1,20 @@
 # Satya Ranjon
-## _This is instagram clone_
 
-[![N|khokon](https://cldup.com/dTxpPi9lDf.thumb.png)](https://satyaranjon.vercel.app/)
+## _Instagram clone -v1.0_
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+## <a href="https://instagram-ui-six.vercel.app/"> Live.....</a>
+
+## 🖥️ Tech Stack
+
+[![My Skills](https://skills.thijs.gg/icons?i=js,react,tailwind,mui)](https://skills.thijs.gg)
+
+<div align="center">
+  <img alt="Demo" src="./public/p.png" />
+  <img alt="Demo" src="./public/12.png" />
+  <img alt="Demo" src="./public/ppp.png" />
+</div>
 
 ## Installation
-
-Dillinger requires [Node.js](https://nodejs.org/) v10+ to run.
 
 Install the dependencies and devDependencies and start the server.
 
