@@ -16,7 +16,7 @@ export default function LoginSign() {
   const { pathname } = useLocation();
   const [passwordShow, setPassowrdShow] = useState(false);
   const [username, setUsername] = useState("demo");
-  const [password, setPassword] = useState("demo");
+  const [password, setPassword] = useState("123456");
   const [email, setEmail] = useState("demo@gmail.com");
   const { signup, login, currentUser, googleAuth, facebookAuth } = useAuth();
   const [error, setError] = useState("");
@@ -27,7 +27,7 @@ export default function LoginSign() {
     e.preventDefault();
     if (pathname === "/signup") {
       if (
-        password.length >= 4 &&
+        password.length > 4 &&
         username.length > 0 &&
         email.match(
           /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
